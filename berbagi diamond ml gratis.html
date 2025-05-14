@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Giveaway Diamond ML</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 60px auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      box-shadow: 0 0 10px #000;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #fdd835;
+    }
+
+    .google-btn {
+      background-color: #fff;
+      color: #444;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+      width: 100%;
+    }
+
+    .google-btn img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    form {
+      display: none;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    label {
+      text-align: left;
+    }
+
+    input {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    button.submit-btn {
+      padding: 12px;
+      background-color: #fdd835;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    button.submit-btn:hover {
+      background-color: #e6c200;
+    }
+
+    .note {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Giveaway Diamond Mobile Legends!</h1>
+    <p>Login dengan akun Google kamu untuk ikut serta dan menangkan <strong>500 Diamond</strong> gratis!</p>
+
+    <button class="google-btn" onclick="mockGoogleLogin()">
+      <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google logo" />
+      Masuk dengan Google
+    </button>
+
+    <form id="mlForm" onsubmit="event.preventDefault(); alert('Data berhasil dikirim! Terima kasih ikut giveaway!');">
+      <label for="userid">User ID ML (ID + Server):</label>
+      <input type="text" id="userid" name="userid" placeholder="Contoh: 12345678(1234)" required />
+      <button type="submit" class="submit-btn">Kirim</button>
+    </form>
+
+    <p class="note">Pemenang akan diumumkan di Instagram resmi kami pada tanggal 20 Mei 2025. Jangan sampai ketinggalan!</p>
+  </div>
+
+  <script>
+    function mockGoogleLogin() {
+      // Simulasi login sukses (nanti bisa diganti dengan Google OAuth asli)
+      alert("Login Google berhasil!");
+      document.querySelector('.google-btn').style.display = 'none';
+      document.getElementById('mlForm').style.display = 'flex';
+    }
+  </script>
+</body>
+</html>
